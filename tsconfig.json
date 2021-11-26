@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@agencycoda/mia-survey-core": [
+        "dist/agencycoda/mia-survey-core/agencycoda-mia-survey-core",
+        "dist/agencycoda/mia-survey-core"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
