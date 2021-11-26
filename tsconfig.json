@@ -6,6 +6,10 @@
       "@agencycoda/mia-survey-core": [
         "dist/agencycoda/mia-survey-core/agencycoda-mia-survey-core",
         "dist/agencycoda/mia-survey-core"
+      ],
+      "@agencycoda/mia-survey-panel": [
+        "dist/agencycoda/mia-survey-panel/agencycoda-mia-survey-panel",
+        "dist/agencycoda/mia-survey-panel"
       ]
     },
     "baseUrl": "./",
