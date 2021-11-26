@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build2": "ng build --prod --project=@agencycoda/mia-survey-core && cd dist/agencycoda/mia-survey-core/ && npm publish --access public",
+    "build3": "ng build --prod --project=@agencycoda/mia-survey-panel && cd dist/agencycoda/mia-survey-panel/ && npm publish --access public",
+    "build4": "ng build --prod --project=@agencycoda/mia-survey-viewer && cd dist/agencycoda/mia-survey-viewer/ && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
