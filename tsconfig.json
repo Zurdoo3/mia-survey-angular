@@ -10,6 +10,10 @@
       "@agencycoda/mia-survey-panel": [
         "dist/agencycoda/mia-survey-panel/agencycoda-mia-survey-panel",
         "dist/agencycoda/mia-survey-panel"
+      ],
+      "@agencycoda/mia-survey-viewer": [
+        "dist/agencycoda/mia-survey-viewer/agencycoda-mia-survey-viewer",
+        "dist/agencycoda/mia-survey-viewer"
       ]
     },
     "baseUrl": "./",
