@@ -2,6 +2,20 @@
  * Public API Surface of mia-survey-core
  */
 
-export * from './lib/mia-survey-core.service';
-export * from './lib/mia-survey-core.component';
+/*
+ * Entites
+ */
+export * from './lib/entities/mia_survey';
+export * from './lib/entities/mia_survey_done';
+export * from './lib/entities/mia_survey_invitation';
+export * from './lib/entities/mia_survey_question';
+
+/*
+ * Services
+ */
+export * from './lib/services/mia_survey.service';
+
+/*
+ * Modules
+ */
 export * from './lib/mia-survey-core.module';
