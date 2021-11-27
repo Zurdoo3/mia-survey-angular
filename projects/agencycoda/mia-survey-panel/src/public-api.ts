@@ -2,6 +2,12 @@
  * Public API Surface of mia-survey-panel
  */
 
-export * from './lib/mia-survey-panel.service';
-export * from './lib/mia-survey-panel.component';
+/*
+ * Pages
+ */
+export * from './lib/pages/survey-list-page/survey-list-page.component';
+
+/*
+ * Modules
+ */
 export * from './lib/mia-survey-panel.module';
