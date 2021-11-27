@@ -35,11 +35,11 @@ export class SurveyListPageComponent implements OnInit {
 
   onAction(action: {key: string; item: any;}) {
     if(action.key == 'add'){
-      
+      this.navigator.navigateByUrl('survey/create');
     } else if (action.key == 'search') {
       this.onSearch(action.item);
     } else if(action.key == 'edit'){
-      
+      this.navigator.navigateByUrl('survey/edit/' + action.item.id);
     } else if(action.key == 'remove'){
       this.pageComp.onClickRemove(action.item);
     }
