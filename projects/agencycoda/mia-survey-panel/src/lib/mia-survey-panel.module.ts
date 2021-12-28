@@ -16,17 +16,26 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
+// Modals
+import { MiaShareSurveyModalComponent } from './modals/mia-share-survey-modal/mia-share-survey-modal.component';
+import { MiaHistoryInvitationSurveyModalComponent } from './modals/mia-history-invitation-survey-modal/mia-history-invitation-survey-modal.component';
 
 // Pages
 import { SurveyListPageComponent } from './pages/survey-list-page/survey-list-page.component';
 import { MiaSurveyCreatePageComponent } from './pages/mia-survey-create-page/mia-survey-create-page.component';
-import { MatSelectModule } from '@angular/material/select';
+
 
 
 
 
 @NgModule({
   declarations: [
+    // Modals
+    MiaShareSurveyModalComponent,
+    MiaHistoryInvitationSurveyModalComponent,
+
     // Pages
     SurveyListPageComponent,
     MiaSurveyCreatePageComponent
