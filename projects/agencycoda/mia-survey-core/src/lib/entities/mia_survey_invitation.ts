@@ -8,7 +8,6 @@ export class MiaSurveyInvitation extends MiaModel {
     caption: string = '';
     created_at: string = '';
     updated_at: string = '';
-    deleted: number = 0;
     token: string = '';
 
 }
