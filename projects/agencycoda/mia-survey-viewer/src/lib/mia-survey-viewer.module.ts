@@ -1,16 +1,25 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MiaSurveyViewerComponent } from './mia-survey-viewer.component';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SurveyExecutePageComponent } from './pages/survey-execute-page/survey-execute-page.component';
 
 
 
 @NgModule({
   declarations: [
-    MiaSurveyViewerComponent
+    SurveyExecutePageComponent
   ],
   imports: [
+    CommonModule,
+    FormsModule,
+
+    MatButtonModule,
+    MatFormFieldModule,
   ],
   exports: [
-    MiaSurveyViewerComponent
+    SurveyExecutePageComponent
   ]
 })
 export class MiaSurveyViewerModule { }

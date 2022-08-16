@@ -2,6 +2,11 @@
  * Public API Surface of mia-survey-viewer
  */
 
-export * from './lib/mia-survey-viewer.service';
-export * from './lib/mia-survey-viewer.component';
+/**
+ * Pages
+ */
+ export * from './lib/pages/survey-execute-page/survey-execute-page.component';
+/**
+ * Modules
+ */
 export * from './lib/mia-survey-viewer.module';

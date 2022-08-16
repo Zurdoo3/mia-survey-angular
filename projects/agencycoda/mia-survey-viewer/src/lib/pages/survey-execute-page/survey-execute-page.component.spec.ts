@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiaSurveyViewerComponent } from './mia-survey-viewer.component';
+import { SurveyExecutePageComponent } from './survey-execute-page.component';
 
-describe('MiaSurveyViewerComponent', () => {
-  let component: MiaSurveyViewerComponent;
-  let fixture: ComponentFixture<MiaSurveyViewerComponent>;
+describe('SurveyExecutePageComponent', () => {
+  let component: SurveyExecutePageComponent;
+  let fixture: ComponentFixture<SurveyExecutePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiaSurveyViewerComponent ]
+      declarations: [ SurveyExecutePageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MiaSurveyViewerComponent);
+    fixture = TestBed.createComponent(SurveyExecutePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
