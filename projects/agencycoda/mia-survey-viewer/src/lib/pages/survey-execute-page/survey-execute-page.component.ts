@@ -34,7 +34,10 @@ export class SurveyExecutePageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    
+    if(this.timerSubs != undefined){
+      clearInterval(this.timerSubs);
+      this.timerSubs = undefined;
+    }
   }
 
   onClickSend() {
@@ -44,6 +47,7 @@ export class SurveyExecutePageComponent implements OnInit, OnDestroy {
   loadTimer() {
     if(this.timerSubs != undefined){
       clearInterval(this.timerSubs);
+      this.timerSubs = undefined;
     }
     this.timerSubs = setInterval(() => {
       this.duration++;

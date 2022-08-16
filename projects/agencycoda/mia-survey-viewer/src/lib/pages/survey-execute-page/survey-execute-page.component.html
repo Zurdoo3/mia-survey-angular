@@ -16,6 +16,47 @@
             <div class="content">
                 <div class="box">
                     {{(index+1)}}. {{question.title}}
+
+                    <!-- Boolean -->
+                    <ng-container *ngIf="question.type == 0">
+                        <button mat-button [ngClass]="{'active': question.data.val == 1}" (click)="question.data.val = 1">SI</button>
+                        <button mat-button [ngClass]="{'active': question.data.val == 0}"(click)="question.data.val = 0">NO</button>
+                    </ng-container>
+
+                    <!-- Short answer -->
+                    <ng-container *ngIf="question.type == 1">
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Escribe tu respuesta"  [(ngModel)]="question.data.val" />
+                        </mat-form-field>
+                    </ng-container>
+
+                    <!-- Text Answer -->
+                    <ng-container *ngIf="question.type == 2">
+                        <mat-form-field>
+                            <textarea matInput type="text" placeholder="Escribe tu respuesta"  [(ngModel)]="question.data.val"></textarea>
+                        </mat-form-field>
+                    </ng-container>
+
+                    <!-- Linear Scale -->
+                    <ng-container *ngIf="question.type == 3">
+                        <mat-radio-group>
+                            <mat-radio-button *ngFor="let opt of question.data.options" [value]="opt.id">
+                                <p>{{opt.title}}</p>
+                                <p>{{opt.id}}</p>
+                            </mat-radio-button>
+                        </mat-radio-group>
+                    </ng-container>
+
+                    <!-- Selector -->
+                    <ng-container *ngIf="question.type == 4">
+                        <mat-form-field appearance="fill">
+                            <mat-select>
+                            <mat-option *ngFor="let opt of question.data.options" [value]="opt.id">
+                                {{opt.title}}
+                            </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </ng-container>
                     <!--<poll-title-desc-preview *ngIf="question.type == 0" [question]="question"></poll-title-desc-preview>
                     <poll-image-preview *ngIf="question.type == 1" [question]="question"></poll-image-preview>
                     <poll-question-type-preview *ngIf="question.type == 2" [question]="question" (questionEmit)="questionEmit($event)"></poll-question-type-preview>-->
