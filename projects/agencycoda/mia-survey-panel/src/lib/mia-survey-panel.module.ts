@@ -25,6 +25,9 @@ import { MiaHistoryInvitationSurveyModalComponent } from './modals/mia-history-i
 // Pages
 import { SurveyListPageComponent } from './pages/survey-list-page/survey-list-page.component';
 import { MiaSurveyCreatePageComponent } from './pages/mia-survey-create-page/mia-survey-create-page.component';
+import { BooleanEditorComponent } from './components/boolean-editor/boolean-editor.component';
+import { LinearScaleEditorComponent } from './components/linear-scale-editor/linear-scale-editor.component';
+import { SelectorEditorComponent } from './components/selector-editor/selector-editor.component';
 
 
 
@@ -38,7 +41,10 @@ import { MiaSurveyCreatePageComponent } from './pages/mia-survey-create-page/mia
 
     // Pages
     SurveyListPageComponent,
-    MiaSurveyCreatePageComponent
+    MiaSurveyCreatePageComponent,
+    BooleanEditorComponent,
+    LinearScaleEditorComponent,
+    SelectorEditorComponent
   ],
   imports: [
 		// Angular

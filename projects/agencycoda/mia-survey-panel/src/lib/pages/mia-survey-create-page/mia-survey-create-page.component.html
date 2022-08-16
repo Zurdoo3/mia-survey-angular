@@ -74,6 +74,8 @@
                     </div>
                     
                     <div fxLayout="column">
+                        <survey-linear-scale-editor *ngIf="question.type == 3"  [question]="question"></survey-linear-scale-editor>
+                        <survey-selector-editor *ngIf="question.type == 4"  [question]="question"></survey-selector-editor>
                         <!--<poll-short-answer-component *ngIf="question.data.subtype == 0" [question]="question"></poll-short-answer-component>
                         <poll-paragraph-component *ngIf="question.data.subtype == 1" [question]="question"></poll-paragraph-component>
                         <poll-multiple-choice-component *ngIf="question.data.subtype == 2" [question]="question"></poll-multiple-choice-component>

@@ -3,6 +3,13 @@
  */
 
 /*
+ * Components
+ */
+export * from './lib/components/item-base-editor.component';
+export * from './lib/components/boolean-editor/boolean-editor.component';
+export * from './lib/components/linear-scale-editor/linear-scale-editor.component';
+export * from './lib/components/selector-editor/selector-editor.component';
+/*
  * Modals
  */
 export * from './lib/modals/mia-history-invitation-survey-modal/mia-history-invitation-survey-modal.component';

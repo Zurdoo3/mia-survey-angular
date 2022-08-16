@@ -25,15 +25,15 @@ import { MIA_CORE_PROVIDER } from '@agencycoda/mia-core';
     {
       provide: MIA_AUTH_PROVIDER,
       useValue: {
-        //baseUrl: 'https://iron-radio-322514.uc.r.appspot.com/'
-        baseUrl: 'http://0.0.0.0:8080/'
+        baseUrl: 'https://dorotea-interno.uc.r.appspot.com/'
+        //baseUrl: 'http://0.0.0.0:8080/'
       }
     },
     {
       provide: MIA_CORE_PROVIDER,
       useValue: {
-        //baseUrl: 'https://iron-radio-322514.uc.r.appspot.com/'
-        baseUrl: 'http://0.0.0.0:8080/'
+        baseUrl: 'https://dorotea-interno.uc.r.appspot.com/'
+        //baseUrl: 'http://0.0.0.0:8080/'
       }
     }
   ],

@@ -32,7 +32,9 @@ export class MiaSurveyCreatePageComponent implements OnInit {
   }
 
   onClickSave() {
-
+    this.surveyService
+    .saveOb(this.survey)
+    .subscribe(res => this.navigator.navigateByUrl('survey/list'));
   }
 
   onClickAddQuestion() {

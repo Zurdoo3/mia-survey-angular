@@ -23,12 +23,11 @@ export class MiaSurveyQuestion extends MiaModel {
       
       static getSubtypes(): any[] {
         return [
-            { id: 0, title: 'Short answer',  },
-            { id: 1, title: 'Paragraph',  },
-            { id: 2, title: 'Multiple choice',  },
-            { id: 3, title: 'Checkboxes',  },
-            { id: 4, title: 'Linear scale',  },
-            { id: 5, title: 'Date',  },
+            { id: 0, title: 'Boolean',  },
+            { id: 1, title: 'Short answer',  },
+            { id: 2, title: 'Paragraph',  },
+            { id: 3, title: 'Linear Scale',  },
+            { id: 4, title: 'Selector',  },
         ];
       }
 }
