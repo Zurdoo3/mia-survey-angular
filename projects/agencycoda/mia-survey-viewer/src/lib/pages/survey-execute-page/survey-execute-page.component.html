@@ -1,7 +1,11 @@
 <!--<app-loading-full-page *ngIf="isLoading"></app-loading-full-page>-->
 <div *ngIf="isLoading">Cargando...</div>
 
-<div *ngIf="survey" class="poll-survey-create">
+<div *ngIf="!survey && !isLoading && status == 2" class="survey-not-exist">No existe la encuesta.</div>
+
+<div *ngIf="!isLoading && status == 3" class="survey-not-exist">Muchas gracias por completar la encuesta.</div>
+
+<div *ngIf="survey && !isLoading" class="poll-survey-create">
     <div class="container">
         <div *ngIf="config?.showHeader" class="header">
             <img [src]="survey?.photo" style="width: 100%;" onerror="this.src='/assets/img/user-avatar-empty.svg';" />
@@ -19,27 +23,27 @@
 
                     <!-- Boolean -->
                     <ng-container *ngIf="question.type == 0">
-                        <button mat-button [ngClass]="{'active': question.data.val == 1}" (click)="question.data.val = 1">SI</button>
-                        <button mat-button [ngClass]="{'active': question.data.val == 0}"(click)="question.data.val = 0">NO</button>
+                        <button mat-button [ngClass]="{'active': question.val == 1}" (click)="question.val = 1">SI</button>
+                        <button mat-button [ngClass]="{'active': question.val == 0}"(click)="question.val = 0">NO</button>
                     </ng-container>
 
                     <!-- Short answer -->
                     <ng-container *ngIf="question.type == 1">
                         <mat-form-field>
-                            <input matInput type="text" placeholder="Escribe tu respuesta"  [(ngModel)]="question.data.val" />
+                            <input matInput type="text" placeholder="Escribe tu respuesta"  [(ngModel)]="question.val" />
                         </mat-form-field>
                     </ng-container>
 
                     <!-- Text Answer -->
                     <ng-container *ngIf="question.type == 2">
                         <mat-form-field>
-                            <textarea matInput type="text" placeholder="Escribe tu respuesta"  [(ngModel)]="question.data.val"></textarea>
+                            <textarea matInput type="text" placeholder="Escribe tu respuesta"  [(ngModel)]="question.val"></textarea>
                         </mat-form-field>
                     </ng-container>
 
                     <!-- Linear Scale -->
                     <ng-container *ngIf="question.type == 3">
-                        <mat-radio-group>
+                        <mat-radio-group [(ngModel)]="question.val">
                             <mat-radio-button *ngFor="let opt of question.data.options" [value]="opt.id">
                                 <p>{{opt.title}}</p>
                                 <p>{{opt.id}}</p>
@@ -50,10 +54,10 @@
                     <!-- Selector -->
                     <ng-container *ngIf="question.type == 4">
                         <mat-form-field appearance="fill">
-                            <mat-select>
-                            <mat-option *ngFor="let opt of question.data.options" [value]="opt.id">
-                                {{opt.title}}
-                            </mat-option>
+                            <mat-select [(ngModel)]="question.val">
+                                <mat-option *ngFor="let opt of question.data.options" [value]="opt.id">
+                                    {{opt.title}}
+                                </mat-option>
                             </mat-select>
                           </mat-form-field>
                     </ng-container>

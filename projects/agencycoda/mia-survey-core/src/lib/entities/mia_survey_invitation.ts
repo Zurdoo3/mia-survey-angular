@@ -9,5 +9,5 @@ export class MiaSurveyInvitation extends MiaModel {
     created_at: string = '';
     updated_at: string = '';
     token: string = '';
-
+    limit: number = 0;
 }
