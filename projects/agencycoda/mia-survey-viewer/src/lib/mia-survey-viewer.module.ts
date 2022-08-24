@@ -1,12 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { SurveyExecutePageComponent } from './pages/survey-execute-page/survey-execute-page.component';
+
+// Angular Material
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { SurveyExecutePageComponent } from './pages/survey-execute-page/survey-execute-page.component';
-import {MatRadioModule} from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
 
 
 @NgModule({
@@ -18,10 +24,12 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,
 
     MatButtonModule,
-    MatInputModule,
     MatFormFieldModule,
+    MatInputModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     SurveyExecutePageComponent

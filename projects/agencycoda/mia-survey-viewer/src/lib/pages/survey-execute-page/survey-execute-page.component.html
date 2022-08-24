@@ -1,16 +1,21 @@
 <!--<app-loading-full-page *ngIf="isLoading"></app-loading-full-page>-->
-<div *ngIf="isLoading">Cargando...</div>
+
+<div class="topbar">
+  <img src="https://agencycoda.com/assets/img/logos/logo-white.svg" alt="[Logo_name]" />
+</div>
+
+<div *ngIf="isLoading" class="content-component"><mat-spinner></mat-spinner></div>
 
 <div *ngIf="!survey && !isLoading && status == 2" class="survey-not-exist">No existe la encuesta.</div>
 
 <div *ngIf="!isLoading && status == 3" class="survey-not-exist">Muchas gracias por completar la encuesta.</div>
 
-<div *ngIf="survey && !isLoading" class="poll-survey-create">
-    <div class="container">
+<div *ngIf="survey && !isLoading" class="poll-survey-preview">
+    <div class="content-component">
         <div *ngIf="config?.showHeader" class="header">
             <img [src]="survey?.photo" style="width: 100%;" onerror="this.src='/assets/img/user-avatar-empty.svg';" />
         </div>
-    
+
         <div class="introduction box">
             <h1> {{ survey?.title }}</h1>
             <p> {{ survey?.caption }} </p>
@@ -69,6 +74,6 @@
         </div>
 
         <!-- <button type="submit" mat-flat-button color="primary" class="btn-send" (click)="onClickSend()" [disabled]="sendBtnDisable">SEND</button> -->
-        <button type="submit" mat-flat-button color="primary" class="btn-send" (click)="onClickSend()">ENVIAR</button>
+        <button type="submit" mat-flat-button color="primary" class="btn-submit" (click)="onClickSend()">ENVIAR</button>
     </div>
 </div>

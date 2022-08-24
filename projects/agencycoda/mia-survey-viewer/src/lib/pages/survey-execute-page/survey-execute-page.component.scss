@@ -1,76 +1,88 @@
-.topbar{
-    padding: 0.5em 3em;
-    .spacer { margin: auto; }
-    h5 { margin: 0; }
-    .btn{
-        width: 7em;
-        margin-right: 2em;
-    }
+.topbar {
+  padding: 16px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
-mat-form-field{
-    width: 100%;
+mat-form-field {
+  width: 100%;
 }
 
-.poll-survey-create{
-    background-color: #F1F8E8;
-    min-height: 100vh;
+.content-component{
+  width: 800px;
+  max-width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 3em;
+  margin: auto;
+}
 
-    .container{
-        padding: 3em;
-        max-width: 800px;
-        margin: auto;
-        .box{
-            margin: 1.5em 0;
-        }
-        h5{
-            margin-top: 0;
-            margin-bottom: 1em;
-        }
-        .introduction{
-            text-align: center;
-            .title{
-                font-size: 1.7em;
-                color: rgba(0, 0, 0, 0.87);
-            }
-        }
-        .btn-send{
-            width: 100%;
-            padding-top: 0.8em;
-            padding-bottom: 0.8em;
-            border-radius: 200px;
-        }
-        .item{
-            display: flex;
-            .content{
-                width: 100%;
-                .box{
-                    padding-bottom: 0;
-                    .bottom-setting-bar{
-                        padding: 0.5em 0;
-                    }
-                }
-            }
-        }
-        .edit-mode{
-            position: relative;
-            .top-setting-bar{
-                
-            }
-            .bottom-setting-bar{
-                border-top: 1px solid #e1e3e9;
-                text-align: right;
-            }
-            .settings{
-                background-color: white;
-                top: 1em;
-                width: 40px;
-                padding: 0;
-                position: sticky;
-                margin-right: -60px;
-                margin-left: 1em;
-            }
-        }
+.poll-survey-preview {
+  background-color: #f1f8e8;
+  min-height: 100vh;
+
+  .container {
+    padding: 3em;
+    max-width: 800px;
+    margin: auto;
+    .box {
+      margin: 1.5em 0;
+    }
+    h5 {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+    .introduction {
+      text-align: center;
+      .title {
+        font-size: 1.7em;
+        color: rgba(0, 0, 0, 0.87);
+      }
     }
 
+    .btn-submit {
+      width: 100%;
+      padding-top: 0.8em;
+      padding-bottom: 0.8em;
+      border-radius: 200px;
+    }
+    .item {
+      display: flex;
+      .content {
+        width: 100%;
+        .box {
+          padding-bottom: 0;
+          .bottom-setting-bar {
+            padding: 0.5em 0;
+          }
+        }
+      }
+    }
+    .edit-mode {
+      position: relative;
+      .top-setting-bar {
+      }
+      .bottom-setting-bar {
+        border-top: 1px solid #e1e3e9;
+        text-align: right;
+      }
+      .settings {
+        background-color: white;
+        top: 1em;
+        width: 40px;
+        padding: 0;
+        position: sticky;
+        margin-right: -60px;
+        margin-left: 1em;
+      }
+    }
+  }
 }
